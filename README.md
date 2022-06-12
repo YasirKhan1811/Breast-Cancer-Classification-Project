@@ -20,9 +20,46 @@ To use Bagging or Boosting you must select a base learner algorithm. For example
 
 ![image](https://user-images.githubusercontent.com/96954071/173231121-4aaf0a75-5e3c-4e7e-a0bd-63efdab82a0d.png)
 
-Bootstrap Sampling (Bootstrapping)
-Links for reference:
-https://www.analyticsvidhya.com/blog/2020/02/what-is-bootstrap-sampling-in-statistics-and-machine-learning/#:~:text=of%20Bootstrap%20Sampling.-,Bootstrap%20Sampling%20in%20Machine%20Learning,stability%20of%20machine%20learning%20algorithms.
+**Bootstrap Sampling (Bootstrapping)**
+Bootstrapping is random sampling from original dataset with replacement. The size of the subsets is the same as the size of the original set.
 
-https://towardsdatascience.com/what-is-bootstrap-sampling-in-machine-learning-and-why-is-it-important-a5bb90cbd89a
+**Bagging**
++ Also known as Bootstrap Aggregation. It is a powerful ensemble method. Bagging is the application of the Bootstrap procedure to a high-variance machine learning algorithm, typically decision trees.
 
++ The idea behind bagging is combining the results of multiple models (for instance, all decision trees) to get a generalized result. Now, bootstrapping comes into picture.
+
++ Bagging (or Bootstrap Aggregating) technique uses these subsets (bags) to get a fair idea of the distribution (complete set). The size of subsets created for bagging may be less than the original set.
+
++ The pictorial representation is as follows:
+
+![image](https://user-images.githubusercontent.com/96954071/173240546-7ea9d5f3-aa22-4bbe-aa4c-ed9afe879189.png)
+
+How Bagging works:
+
++ Multiple subsets are created from the original dataset, selecting observations with replacement.
+
++ A base model (weak model) is created on each of these subsets.
+
++ The models run in parallel and are independent of each other.
+
++ The final predictions are determined by combining the predictions from all the models.
+
+Now, bagging can be represented diagrammatically as follows:
+
+![image](https://user-images.githubusercontent.com/96954071/173240617-1a9d2e9a-9cb7-46fe-9112-3f489adcc5ac.png)
+
+**Boosting**
+
+* Boosting is a sequential process, where each subsequent model attempts to correct the errors of the previous model. The succeeding models are dependent on the previous model.
+* In this technique, learners are learned sequentially with early learners fitting simple models to the data and then analyzing data for errors. In other words, we fit consecutive trees (random sample) and at every step, the goal is to solve for net error from the prior tree.
+* When an input is misclassified by a hypothesis, its weight is increased so that next hypothesis is more likely to classify it correctly. By combining the whole set at the end converts weak learners into better performing model.
+ 
+Let’s understand the way boosting works in the below steps.
+
+1. A subset is created from the original dataset.
+
+2. Initially, all data points are given equal weights.
+
+3. A base model is created on this subset.
+
+4. This model is used to make predictions on the whole dataset.
