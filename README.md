@@ -9,6 +9,9 @@ Links for references:
 
 In ensemble learning, a set of weak learners are combined to create a strong learner that obtains better performance than a single one. It combines several models to increase the performance of ML model compared to a single model. Bagging and Boosting are two types of ensemble learning techniques. These two decrease the variance of single estimate as they combine several estimates from different models.
 
+What are ensemble methods?
+Ensemble learning is a machine learning paradigm where multiple models (often called “weak learners”) are trained to solve the same problem and combined to get better results. The main hypothesis is that when weak models are correctly combined we can obtain more accurate and/or robust models.
+
 The main causes of error are due to noise, bias, and variance. Ensemble helps to minimize these factors.
 
 + Bagging helps to decrease the model’s variance.
