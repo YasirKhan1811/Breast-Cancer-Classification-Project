@@ -63,3 +63,10 @@ Let’s understand the way boosting works in the below steps.
 3. A base model is created on this subset.
 
 4. This model is used to make predictions on the whole dataset.
+
+Let's understand Boosting with the following illustration:
+![image](https://user-images.githubusercontent.com/96954071/173283063-f549805b-3fdc-467c-a997-179be2905d51.png)
+
+**Getting N learners for Bagging and Boosting**
+
+
