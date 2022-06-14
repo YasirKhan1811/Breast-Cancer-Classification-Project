@@ -1,11 +1,14 @@
 # Ensemble-Learning
-Ensemble Learning Methods
+Ensemble Learning Methods:
+**Bagging: Deep trees. Independent weak learners (parallel models). Used to decrease the variance of the base model.
+Boosting: Shallow trees. Dependent weak learners (sequential models). Used to decrease the biaseness of the base model.**
 
 Links for references:
 1. https://www.kaggle.com/code/prashant111/bagging-vs-boosting/notebook
 2. https://towardsdatascience.com/ensemble-methods-bagging-boosting-and-stacking-c9214a10a205
 3. https://www.datacamp.com/tutorial/xgboost-in-python#what
 4. https://www.analyticsvidhya.com/blog/2018/06/comprehensive-guide-for-ensemble-models/
+5. https://towardsdatascience.com/decision-tree-ensembles-bagging-and-boosting-266a8ba60fd9
 
 In ensemble learning, a set of weak learners are combined to create a strong learner that obtains better performance than a single one. It combines several models to increase the performance of ML model compared to a single model. Bagging and Boosting are two types of ensemble learning techniques. These two decrease the variance of single estimate as they combine several estimates from different models.
 
@@ -71,5 +74,43 @@ Let's understand Boosting with the following illustration:
 ![image](https://user-images.githubusercontent.com/96954071/173283063-f549805b-3fdc-467c-a997-179be2905d51.png)
 
 **Getting N learners for Bagging and Boosting**
+
++ Bagging and Boosting get N learners by generating additional data in the training stage.
++ N new training data sets are produced by random sampling with replacement from the original set.
++ By sampling with replacement some observations may be repeated in each new training data set.
++ In the case of Bagging, any element has the same probability to appear in a new data set.
++ However, for Boosting the observations are weighted and therefore some of them will take part in the new sets more often.
++ These multiple sets are used to train the same learner algorithm and therefore different classifiers are produced.
+
+This is represented diagrammatically as follows:
+![image](https://user-images.githubusercontent.com/96954071/173543234-203158bd-c016-4ce8-81ad-8b2fddcbf2bb.png)
+
+**Weighted data elements**
+While the training stage is parallel for Bagging (i.e., each model is built independently), Boosting builds the new learner in a sequential way as follows:
+
+![image](https://user-images.githubusercontent.com/96954071/173543653-44118298-ddc2-4223-8183-9a0f67f47e37.png)
+
++ After each training step, the weights are redistributed. Misclassified data increases its weights to emphasise the most difficult cases.
++ In this way, subsequent learners will focus on them during their training.
+
+**Classification stage in action**
++ To predict the class of new data we only need to apply the N learners to the new observations.
++ In Bagging the result is obtained by averaging the responses of the N learners (or majority vote).
++ However, Boosting assigns a second set of weights, this time for the N classifiers, in order to take a weighted average of their estimates.
++ This is shown diagrammatically below:
+
+![image](https://user-images.githubusercontent.com/96954071/173544611-db5567dd-3f92-40c9-b192-3124f6259efc.png)
+
++ In the Boosting training stage, the algorithm allocates weights to each resulting model.
++ A learner with good a classification result on the training data will be assigned a higher weight than a poor one.
++ So when evaluating a new learner, Boosting needs to keep track of learners’ errors, too.
++ Let’s see the differences in the procedures:
+
+![image](https://user-images.githubusercontent.com/96954071/173545480-d0e09331-b6ef-4673-b1eb-ef7de06d2a77.png)
+
++ Some of the Boosting techniques include an extra-condition to keep or discard a single learner.
++ For example, in AdaBoost, the most renowned, an error less than 50% is required to maintain the model; otherwise, the iteration is repeated until achieving a learner better than a random guess.
++ The previous image shows the general process of a Boosting method, but several alternatives exist with different ways to determine the weights to use in the next training step and in the classification stage.
+
 
 
