@@ -1,14 +1,12 @@
-# Ensemble-Learning
+# Theory of Breast Cancer Prediction
+
+This project involves building XGBoost, an ensemble learner classification model, to predict whether the breast cancer is malignant "M" or benign "B". This readme file discusses about the ensemble learning methods in great detail.
+
+##Ensemble-Learning
+
 Ensemble Learning Methods:
 **Bagging: Deep trees. Independent weak learners (parallel models). Used to decrease the variance of the base model.
 Boosting: Shallow trees. Dependent weak learners (sequential models). Used to decrease the biaseness of the base model.**
-
-Links for references:
-1. https://www.kaggle.com/code/prashant111/bagging-vs-boosting/notebook
-2. https://towardsdatascience.com/ensemble-methods-bagging-boosting-and-stacking-c9214a10a205
-3. https://www.datacamp.com/tutorial/xgboost-in-python#what
-4. https://www.analyticsvidhya.com/blog/2018/06/comprehensive-guide-for-ensemble-models/
-5. https://towardsdatascience.com/decision-tree-ensembles-bagging-and-boosting-266a8ba60fd9
 
 In ensemble learning, a set of weak learners are combined to create a strong learner that obtains better performance than a single one. It combines several models to increase the performance of ML model compared to a single model. Bagging and Boosting are two types of ensemble learning techniques. These two decrease the variance of single estimate as they combine several estimates from different models.
 
@@ -111,6 +109,13 @@ While the training stage is parallel for Bagging (i.e., each model is built inde
 + Some of the Boosting techniques include an extra-condition to keep or discard a single learner.
 + For example, in AdaBoost, the most renowned, an error less than 50% is required to maintain the model; otherwise, the iteration is repeated until achieving a learner better than a random guess.
 + The previous image shows the general process of a Boosting method, but several alternatives exist with different ways to determine the weights to use in the next training step and in the classification stage.
+
+Links for references:
+1. https://www.kaggle.com/code/prashant111/bagging-vs-boosting/notebook
+2. https://towardsdatascience.com/ensemble-methods-bagging-boosting-and-stacking-c9214a10a205
+3. https://www.datacamp.com/tutorial/xgboost-in-python#what
+4. https://www.analyticsvidhya.com/blog/2018/06/comprehensive-guide-for-ensemble-models/
+5. https://towardsdatascience.com/decision-tree-ensembles-bagging-and-boosting-266a8ba60fd9
 
 
 
