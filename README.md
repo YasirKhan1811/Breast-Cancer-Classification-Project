@@ -1,4 +1,4 @@
-# Breast Cancer Classification Malignant/Benign
+# Breast Cancer Classification (Malignant/Benign)
 
 The [Breast Cancer Diagnostic data](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29) is available on the UCI Machine Learning Repository. This database is also available through the [UW CS ftp server](http://ftp.cs.wisc.edu/math-prog/cpo-dataset/machine-learn/cancer/WDBC/).
 
