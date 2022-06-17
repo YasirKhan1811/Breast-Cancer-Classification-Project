@@ -1,4 +1,4 @@
-# Theory of Breast Cancer Prediction
+# Bagging and Boosting Algorithms (Random Forest and XGBoost)
 
 This project involves building XGBoost, an ensemble learner classification model, to predict whether the breast cancer is malignant "M" or benign "B". This readme file discusses about the ensemble learning methods in great detail.
 
