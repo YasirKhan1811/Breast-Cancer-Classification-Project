@@ -27,6 +27,8 @@ To use Bagging or Boosting you must select a base learner algorithm. For example
 **Bootstrap Sampling (Bootstrapping)**
 Bootstrapping is random sampling from original dataset with replacement. The size of the subsets is the same as the size of the original set.
 
+https://www.analyticsvidhya.com/blog/2020/02/what-is-bootstrap-sampling-in-statistics-and-machine-learning/#:~:text=of%20Bootstrap%20Sampling.-,Bootstrap%20Sampling%20in%20Machine%20Learning,stability%20of%20machine%20learning%20algorithms
+
 **Bagging**
 + Also known as Bootstrap Aggregation. It is a powerful ensemble method. Bagging is the application of the Bootstrap procedure to a high-variance machine learning algorithm, typically decision trees.
 
